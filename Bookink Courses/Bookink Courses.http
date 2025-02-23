@@ -1,0 +1,6 @@
+@Bookink_Courses_HostAddress = http://localhost:5233
+
+GET {{Bookink_Courses_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
