@@ -1,3 +1,4 @@
+using Bookink_Courses.Middleware;
 using Bookink_Courses.Models.Context;
 using Bookink_Courses.Models.DTOs;
 using Bookink_Courses.Models.Interfaces;
@@ -29,13 +30,15 @@ namespace Bookink_Courses
 
             builder.Services.AddAutoMapper(typeof(StartupBase));
 
+            builder.Services.AddLogging();
+
             builder.Services.AddScoped<IRepository<CourseDto>, Course_Repo>();
             builder.Services.AddScoped<IRepository<CatagoryDto>, Catagory_Repo>();
             builder.Services.AddScoped<IRepository<LessonDto>, Lesson_Repo>();
             builder.Services.AddScoped<IRepository<TrainerDto>, Trainer_Repo>();
             builder.Services.AddScoped<IRepository<Course_Trainer_Dto>, Course_Trainer_Repo>();
             builder.Services.AddScoped<IAuth, AuthService>();
-
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -44,6 +47,8 @@ namespace Bookink_Courses
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseMiddleware<ErrorHandlingMiddleware>();
 
             app.UseHttpsRedirection();
 

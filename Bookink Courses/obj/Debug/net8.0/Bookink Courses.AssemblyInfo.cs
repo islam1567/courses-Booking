@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bookink Courses")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebb3e6d89e39ae2dbab927f7e785db2739cc51b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bookink Courses")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bookink Courses")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
